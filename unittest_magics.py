@@ -2,8 +2,8 @@ import ast
 import importlib
 from IPython import get_ipython
 from IPython.core.magic import cell_magic, Magics, magics_class
+import sys
 import unittest
-
 # __file__ = ''
 
 
@@ -48,7 +48,8 @@ class UnittestMagics(Magics):
         code = '\n'.join(self.cells)
         node = ast.parse(code, __file__, 'exec')
         mod = importlib.types.ModuleType('__test__')
-        mod.__dict__['unittest'] = unittest
+        for k, v in sys.modules['__main__'].__dict__.items():
+            mod.__dict__[k] = v
         exec(compile(node, '__main__', 'exec'), mod.__dict__)
         runner = unittest.defaultTestLoader.loadTestsFromModule(mod)
         result = unittest.TestResult()
