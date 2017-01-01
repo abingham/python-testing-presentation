@@ -2,6 +2,8 @@ import ast
 import importlib
 from IPython import get_ipython
 from IPython.core.magic import cell_magic, Magics, magics_class
+from IPython.core.magic_arguments import (argument, magic_arguments,
+                                          parse_argstring)
 import sys
 import unittest
 # __file__ = ''
@@ -47,32 +49,27 @@ class UnittestMagics(Magics):
     def run_cells(self):
         code = '\n'.join(self.cells)
         node = ast.parse(code, __file__, 'exec')
-        mod = importlib.types.ModuleType('__test__')
+        mod = importlib.types.ModuleType('__unittest_magics__')
         for k, v in sys.modules['__main__'].__dict__.items():
             mod.__dict__[k] = v
-        exec(compile(node, '__main__', 'exec'), mod.__dict__)
+        exec(compile(node, '__unittest_magics__', 'exec'), mod.__dict__)
         runner = unittest.defaultTestLoader.loadTestsFromModule(mod)
         result = unittest.TestResult()
         result = runner.run(result)
         format_result(result)
 
     @cell_magic
-    def unittest_reset(self, _, cell):
-        self.cells = [cell]
+    @magic_arguments()
+    @argument('-r', '--reset', action='store_true')
+    @argument('-n', '--no-exec', action='store_true')
+    def unittest_run(self, arg_string, cell):
+        args = parse_argstring(UnittestMagics.unittest_run, arg_string)
+        if args.reset:
+            self.cells = []
 
-    @cell_magic
-    def unittest_append(self, _, cell):
         self.cells.append(cell)
 
-    @cell_magic
-    def unittest_complete(self, line, cell):
-        self.unittest_append(line, cell)
-        self.run_cells()
-
-    @cell_magic
-    def unittest_run(self, line, cell):
-        self.unittest_reset(line, cell)
-        self.run_cells()
-
+        if not args.no_exec:
+            self.run_cells()
 
 get_ipython().register_magics(UnittestMagics)
