@@ -74,5 +74,5 @@ class UnittestMagics(Magics):
         self.unittest_reset(line, cell)
         self.run_cells()
 
-ip = get_ipython()
-ip.register_magics(UnittestMagics)
+
+get_ipython().register_magics(UnittestMagics)
