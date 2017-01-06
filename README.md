@@ -22,6 +22,15 @@ First start the notebook.
 jupyter notebook
 ```
 
-This will open a browser window with a list of notebooks. It should only contain one, so click it.
+This will open a browser window with a list of notebooks. The relevant notebooks are:
+
+ - unittest.ipynb
+ - mock.ipynb
+ - pytest.ipynb
+ - hypothesis.ipynb
+ - cosmic-ray.ipynb
+
+Click on any of these to open them in your browser.
 
 Then look for the icon in the notebook toolbar for running the presentation.
+(Hint: it looks a bit like a histogram.)
