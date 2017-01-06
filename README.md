@@ -1,4 +1,4 @@
-This is a presentation/workshop on various testing technologies in Python. It's built using (RISE)[https://github.com/damianavila/RISE], a jupyter notebook-based presentation system using reveal.js.
+This is a presentation/workshop on various testing technologies in Python. It's built using [RISE](https://github.com/damianavila/RISE), a jupyter notebook-based presentation system using reveal.js.
 
 # Installation
 
