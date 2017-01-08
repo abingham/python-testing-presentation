@@ -18,6 +18,17 @@ body {
   letter-spacing: -0.02em;
   color: black; }
 
+/* .rise-enabled {
+    background-color: white !important;
+    font-size: 125% !important;
+    background-image: url(sixty-north-logo.small.png), padding(;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    padding: 5px 5px 5px 5px;
+}
+*/
+
 ::selection {
   color: white;
   background: rgba(0, 0, 0, 0.99);

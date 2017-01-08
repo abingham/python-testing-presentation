@@ -1,0 +1,14 @@
+* Verify all of the decks
+** unittest
+   - [ ] CSS imported
+   - [ ] magics working
+   - [ ] examples working
+
+* Before presenting
+** "run all cells" for each presentation
+   This ensures that the markdown is rendered ahead of time
+** Clear output for each presentation
+   This makes the demonstrations more effective
+** Check that dependencies are installed
+   In practice this probably means to ensure that you start the presentation
+   from the correct virtual machine.
