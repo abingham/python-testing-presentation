@@ -19,6 +19,7 @@ jupyter-nbextension enable rise --py --sys-prefix
 First start the notebook.
 
 ```
+cd slides
 jupyter notebook
 ```
 
