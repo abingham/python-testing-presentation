@@ -12,3 +12,33 @@
 ** Check that dependencies are installed
    In practice this probably means to ensure that you start the presentation
    from the correct virtual machine.
+
+* Workshop
+
+** Codebase ideas
+
+   I need some code bases to work with in the workshop. Here are some the
+   qualities I think are important:
+
+ - easily available / installable
+ - easy to understand / accessible. Don't want to spend a lot of time understanding it.
+ - easy to understand testing requirements
+ - minimal dependencies and infrastructure, i.e. "just some code"
+ - involves exceptions somewhere
+ - is amenable to mocking somehow, i.e. it has some parameterized algorithm or something
+ - is amenable to hypothesis testing, i.e. it has some element which can be "validated" by throwing lots of input at it.
+
+ Using something from the standard library is probably a good idea. Everyone will have it, it'll be documented, and it'll be approachable. Candidates:
+
+ - difflib
+ - datetime
+ - heapq
+ - itertools
+ - pathlib
+ - scheduler
+
+*** Timezone calculation
+    Rob thought that a timezone-related testing problem would be interesting.
+    for example, we need to calculate the correct end-time for a coupon so that
+    all relevant timezones have access to it until at least midnight their time.
+    Simple, easy to explain, and easy to test.
