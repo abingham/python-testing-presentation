@@ -1,3 +1,4 @@
+* TODO Set up initialization cells for each slideshow
 * Verify all of the decks
 ** unittest
    - [ ] CSS imported
@@ -12,6 +13,9 @@
 ** Check that dependencies are installed
    In practice this probably means to ensure that you start the presentation
    from the correct virtual machine.
+** Verify that slideshows are "trusted"
+   This allows the initialization cells to execute. Make a slideshow trusted
+   through the file menu.
 
 * Workshop
 

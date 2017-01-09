@@ -8,12 +8,34 @@ First you need to install the Python stuff (probably in a virtual environment):
 pip install -r requirements.txt
 ```
 
-After this install the jupyter extensions. Note that you may need to reactivate your virtual environment for your shell to properly see the commands:
+## Installing the RISE slideshow extension
+
+After this install the RISE jupyter extensions. Note that you may need to
+reactivate your virtual environment for your shell to properly see the commands:
 
 ```
-jupyter-nbextension install rise --py --sys-prefix
-jupyter-nbextension enable rise --py --sys-prefix
+jupyter nbextension install rise --py --sys-prefix
+jupyter nbextension enable rise --py --sys-prefix
 ```
+
+## Installing the Jupyter "contrib" extensions
+
+If you want the slideshows to automatically run certain initialization cells
+(hint: you probably do) then you need to install the "initialization cells"
+extension from the Jupyter contrib extensions:
+
+```
+jupyter contrib nbextension install --user
+jupyter nbextension enable init_cell/main
+```
+
+Get more info on these extensions
+at
+[the project page](https://github.com/ipython-contrib/jupyter_contrib_nbextensions).
+
+**NB:** Running initialization cells requires that you "trust" the notebooks.
+You'll probably need to do this for each slideshow notebook for which you want
+initialization cells.
 
 # Running
 First start the notebook.
