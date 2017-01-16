@@ -1,0 +1,18 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /Users/sixtynorth/projects/python-testing-presentation/presentation.org
+
+
+* DONE Look into script for prepping presentations
+  CLOSED: [2017-01-16 Mon 16:27]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2017-01-16 Mon 16:27
+  :ARCHIVE_FILE: ~/projects/python-testing-presentation/presentation.org
+  :ARCHIVE_CATEGORY: presentation
+  :ARCHIVE_TODO: DONE
+  :END:
+  It would be nice to have a script that could "run all cells" and "clear all
+output" for our notebooks from the command line.
+
+  http://tritemio.github.io/smbits/2016/01/02/execute-notebooks/
