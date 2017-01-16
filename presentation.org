@@ -1,9 +1,47 @@
-* TODO Set up initialization cells for each slideshow
-* Verify all of the decks
-** unittest
+* TODO Verify all of the decks
+** DONE intro
+   CLOSED: [2017-01-16 Mon 10:21]
+   - [X] CSS imported
+   - [X] initialization cell
+** DONE unittest
+   CLOSED: [2017-01-16 Mon 11:08]
+   - [X] CSS imported
+   - [X] magics working
+   - [X] examples working
+   - [X] initialization cell
+* TODO mock
    - [ ] CSS imported
    - [ ] magics working
    - [ ] examples working
+   - [ ] initialization cell
+* TODO pytest
+   - [X] CSS imported
+   - [X] magics working
+   - [X] examples working
+   - [X] initialization cell
+
+* TODO hypothesis
+   - [X] CSS imported
+   - [X] magics working
+   - [X] examples working
+   - [X] initialization cell
+
+* TODO cosmic ray
+   - [X] CSS imported
+   - [X] magics working
+   - [X] examples working
+   - [X] initialization cell
+
+
+
+* TODO pytest interpolation example
+  Can we do this with a code cell? Or does it need to stay as markdown?
+
+* TODO Look into script for prepping presentations
+  It would be nice to have a script that could "run all cells" and "clear all
+output" for our notebooks from the command line.
+
+  http://tritemio.github.io/smbits/2016/01/02/execute-notebooks/
 
 * Before presenting
 ** "run all cells" for each presentation
@@ -17,6 +55,12 @@
    This allows the initialization cells to execute. Make a slideshow trusted
    through the file menu.
 
+** Remove the .hypothesis directory
+** Have cosmic-ray terminal session ready
+   Including ready access to an editor for creating survivors.
+
+   It's probably best to do it with a celery worker since that seems to do
+   things concurrently. And it's cool.
 * Workshop
 
 ** Codebase ideas
