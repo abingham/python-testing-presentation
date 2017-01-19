@@ -1,6 +1,8 @@
 * TODO pytest interpolation example
   Can we do this with a code cell? Or does it need to stay as markdown?
-
+* TODO Figure out underscore display problem
+  When displaying dunders (or any underscore), the underscores are hidden by
+  subsequent lines of text. Probably a CSS issue.
 * Before presenting
 ** Run the "prep_tests.sh" script
    Alternatively, do this manually
