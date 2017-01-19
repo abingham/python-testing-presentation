@@ -57,3 +57,16 @@ Click on any of these to open them in your browser.
 
 Then look for the icon in the notebook toolbar for running the presentation.
 (Hint: it looks a bit like a histogram.)
+
+## Prepping the slides
+
+Prior to starting the notebook, you might want to run the script that prepares
+the slides for presentation, `prep_slides.sh`:
+
+```
+./prep_slides *.ipynb
+```
+
+This will execute all of the cells, clear the output, and "trust" the notebooks.
+This isn't strictly necessary, but it's a good way to start presentations from a
+known state.
