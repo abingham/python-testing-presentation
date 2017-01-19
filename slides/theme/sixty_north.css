@@ -176,6 +176,7 @@ pre.src {
 
 code {
     font-family: "Inconsolata", sans-serif;
+    line-height: 1.4em;
 }
 
 .reveal .text_cell {
