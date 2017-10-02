@@ -1,4 +1,6 @@
+hypothesis
 ipytest
 jupyter
-rise
 jupyter_contrib_nbextensions
+pytest
+rise
